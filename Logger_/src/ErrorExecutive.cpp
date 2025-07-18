@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : main.cpp
+ * file name : ErrorExecutive.cpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,10 +10,25 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include<iostream>
-using namespace std;
-int main()
+#include "ErrorExecutive.hpp"
+
+void ErrorExecutive::fileNotFound()
 {
 
-	return 0;
+}
+void ErrorExecutive::bufferOverflow()
+{
+
+}
+void ErrorExecutive::bufferUnderFlow()
+{
+
+}
+void ErrorExecutive::dataValidation(int data)
+{
+
+}
+void ErrorExecutive::preconditon()
+{
+
 }

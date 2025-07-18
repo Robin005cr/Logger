@@ -14,11 +14,11 @@ project(question_paper_set_creator)
 set(CMAKE_CXX_STANDARD 17)
 
 # Include directories
-include_directories(${PROJECT_SOURCE_DIR}/inc)
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Source files
 file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
-file(GLOB_RECURSE HEADERS ${PROJECT_SOURCE_DIR}/inc/*.hpp)
+file(GLOB_RECURSE HEADERS ${PROJECT_SOURCE_DIR}/include/*.hpp)
 
 # Add executable
 add_executable(Logger_ ${SOURCES} ${HEADERS})

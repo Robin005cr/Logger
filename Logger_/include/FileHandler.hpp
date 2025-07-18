@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : main.cpp
+ * file name : ExceptionHandler.hpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,10 +10,8 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include<iostream>
-using namespace std;
-int main()
+#pragma once
+class FileHandler
 {
-
-	return 0;
-}
+public:
+};
