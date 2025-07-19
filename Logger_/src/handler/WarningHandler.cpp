@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : WarningExecutive.cpp
+ * file name : WarningHandler.hpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,8 +10,4 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include "WarningExecutive.hpp"
-void WarningExecutive::bufferFill() {}
-void WarningExecutive::lowDiskSpace() {}
-void WarningExecutive::highCpuUtilization() {}
-void WarningExecutive::dataLoss() {}
+#include "handler/WarningHandler.hpp"

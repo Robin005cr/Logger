@@ -11,3 +11,33 @@
  *
  */
 #include "FileHandler.hpp"
+
+static void createLogFile()
+{
+    fileType = "txt";
+#ifdef _WIN32
+    string logPath = "C:/Users/ASUS/Desktop/Question_Paper_Set_Creator/input_ques/questions.txt";
+#else
+    string logPath = "/home/username/Question_Paper_Set_Creator/input_ques/questions.txt";
+#endif
+    string fileName = "logger"
+                      "." +
+                      fileType;
+    ofstream outFile(fileName);
+
+    if (!outFile.is_open())
+    {
+        cerr << "Failed to create file: " << fileName << "\n";
+    }
+}
+static void writeToLog(const string &message, const string &logType)
+{
+    ofstream logFile("log.txt", ios::app);
+    if (!logFile.is_open())
+    {
+        cerr << "Failed to open log file." << endl;
+        return;
+    }
+    logFile << "[" << logType << "] " << message << endl;
+    logFile.close();
+}

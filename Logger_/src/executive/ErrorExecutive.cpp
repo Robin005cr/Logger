@@ -10,10 +10,21 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include "ErrorExecutive.hpp"
+#include <iostream>
+#include <fstream>
+#include "executive/ErrorExecutive.hpp"
 
+using namespace std;
 void ErrorExecutive::fileNotFound()
 {
+    ofstream fileTax("Tax-2021.txt"); // It will create a file if it does not exist.
+    
+
+    if (!fileTax.is_open())
+    {
+        ErrorHandler::LOG_ERROR("File not found: Tax-2021.txt");
+    }
+
 
 }
 void ErrorExecutive::bufferOverflow()

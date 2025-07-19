@@ -11,8 +11,10 @@
  *
  */
 #pragma once
-
+#include <iostream>
+#include <string>
 class ErrorHandler
 {
 public:
+    static void LOG_ERROR(const std::string& errorMessage);
 };

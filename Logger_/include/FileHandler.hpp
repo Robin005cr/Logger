@@ -11,7 +11,17 @@
  *
  */
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 class FileHandler
 {
+private:
+    static int setNum;
+    static string fileType;
+
 public:
+    static void createLogFile();
+    static void writeToLog(const string &message, const string &logType);
 };

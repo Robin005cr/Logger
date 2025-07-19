@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : ExceptionHandler.cpp
+ * file name : ErrorHandler.cpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,10 +10,4 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include "ErrorHandler.hpp"
-#include "FileHandler.hpp"
-void ErrorHandler::LOG_ERROR(const std::string &errorMessage)
-{
-    std::cerr << "Error: " << errorMessage << std::endl;
-    FileHandler::writeToLog(errorMessage, "ERROR");
-}
+#include "handler/ExceptionHandler.hpp"

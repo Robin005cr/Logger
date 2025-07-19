@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : ErrorExecutive.hpp
+ * file name : WarningHandler.hpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -11,13 +11,11 @@
  *
  */
 #pragma once
-class ErrorExecutive
+#include<string>
+class WarningHandler
 {
-    public:
-        void fileNotFound();
-        void bufferOverflow();
-        void bufferUnderFlow();
-        void dataValidation(int data);
-        void preconditon();
+public:
+    static void LOG_WARNING(const std::string &warningMessage){}
+
 
 };
