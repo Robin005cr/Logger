@@ -20,7 +20,7 @@ void ErrorExecutive::fileNotFound()
     ofstream fileTax("Tax-2021.txt"); // It will create a file if it does not exist.
     
 
-    if (!fileTax.is_open())
+    if (fileTax.is_open())
     {
         ErrorHandler::LOG_ERROR("File not found: Tax-2021.txt");
     }

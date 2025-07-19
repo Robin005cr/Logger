@@ -11,9 +11,15 @@
  *
  */
 #include<iostream>
+#include "Logger.hpp"
+#include "executive/ErrorExecutive.hpp"
+#include "FileHandler.hpp"
 using namespace std;
 int main()
-{
-
+{ 
+	cout << "Helloworld";
+	FileHandler::createLogFile();
+	ErrorExecutive E;
+	E.fileNotFound();
 	return 0;
 }

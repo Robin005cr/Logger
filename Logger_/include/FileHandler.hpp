@@ -19,6 +19,7 @@ class FileHandler
 {
 private:
     static int setNum;
+    static string fileName;
     static string fileType;
 
 public:
