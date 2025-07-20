@@ -11,7 +11,9 @@
  *
  */
 #pragma once
+#include <string>
 class ExceptionHandler
 {
 public:
+    static void LOG_EXCEPTION(const std::string &exceptionMessage, const std::string &filePath, int lineNumber);
 };

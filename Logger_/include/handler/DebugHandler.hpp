@@ -1,6 +1,6 @@
 /*
  * project   : https://github.com/Robin005cr/Logger
- * file name : ExceptionHandler.cpp
+ * file name : DebugHandler.hpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,12 +10,12 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include "handler/ExceptionHandler.hpp"
-#include "FileHandler.hpp"
-using namespace std;
-void ExceptionHandler::LOG_EXCEPTION(const string &exceptionMessage,const string& filePath, int lineNumber)
+#pragma once
+#include<string>
+class DebugHandler
 {
+public:
+    static void LOG_DEBUG(const std::string &debugMessage,const std::string& filePath, int lineNumber){}
 
-    
-    FileHandler::writeToLog(exceptionMessage, "EXCEPTION",filePath, lineNumber);
-}
+
+};

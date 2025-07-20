@@ -13,7 +13,8 @@
 #include <iostream>
 #include <fstream>
 #include "executive/ErrorExecutive.hpp"
-
+int minimumValue = 35;
+int maximumValue = 100;
 using namespace std;
 void ErrorExecutive::fileNotFound()
 {
@@ -37,7 +38,14 @@ void ErrorExecutive::bufferUnderFlow()
 }
 void ErrorExecutive::dataValidation(int data)
 {
-
+    if (data < minimumValue || data > maximumValue)
+    {
+        ErrorHandler::LOG_ERROR("Data validation failed: Value out of range", __FILE__, __LINE__);
+    }
+    else
+    {
+        cout << "Data is valid: " << data << endl;
+    }
 }
 void ErrorExecutive::preconditon()
 {

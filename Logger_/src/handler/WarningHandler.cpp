@@ -11,3 +11,10 @@
  *
  */
 #include "handler/WarningHandler.hpp"
+#include "FileHandler.hpp"
+using namespace std;
+void WarningHandler::LOG_WARNING(const string &warningMessage,const string& filePath, int lineNumber)
+{
+
+    FileHandler::writeToLog(warningMessage, "Warning",filePath, lineNumber);
+}
