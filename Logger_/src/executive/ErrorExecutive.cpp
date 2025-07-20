@@ -22,7 +22,7 @@ void ErrorExecutive::fileNotFound()
 
     if (fileTax.is_open())
     {
-        ErrorHandler::LOG_ERROR("File not found: Tax-2021.txt");
+        ErrorHandler::LOG_ERROR("File not found: Tax-2021.txt", __FILE__, __LINE__);
     }
 
 

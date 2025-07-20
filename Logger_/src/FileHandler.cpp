@@ -30,7 +30,7 @@ void FileHandler::createLogFile()
         cerr << "Failed to create file: " << fileName << "\n";
     }
 }
-void FileHandler::writeToLog(const string &message, const string &logType)
+void FileHandler::writeToLog(const string &message, const string &logType,const string& filePath, int lineNumber)
 {
     ofstream logFile(fileName, ios::app);
     if (!logFile.is_open())
@@ -38,6 +38,16 @@ void FileHandler::writeToLog(const string &message, const string &logType)
         cerr << "Failed to open log file." << endl;
         return;
     }
-    logFile << "[" << logType << "] " << message << endl;
+    auto now = std::chrono::system_clock::now();
+    std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+    // Format time as [YYYY-MM-DD HH:MM:SS]
+    char timeStr[20];
+    std::strftime(timeStr, sizeof(timeStr), "%Y-%m-%d %H:%M:%S", std::localtime(&now_time));
+    logFile << "[" << timeStr << "] "
+            << "[" << logType << "] " << message << endl;
+    if (!filePath.empty() && lineNumber > 0)
+    {
+        logFile << "File: " << filePath << ", Line: " << lineNumber << endl;
+    }
     logFile.close();
 }

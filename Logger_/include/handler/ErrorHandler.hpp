@@ -16,5 +16,5 @@
 class ErrorHandler
 {
 public:
-    static void LOG_ERROR(const std::string& errorMessage);
+    static void LOG_ERROR(const std::string& errorMessage, const std::string& filePath, int lineNumber);
 };

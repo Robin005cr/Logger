@@ -1,1 +1,2 @@
-[ERROR] File not found: Tax-2021.txt
+[2025-07-20 14:08:49] [ERROR] File not found: Tax-2021.txt
+File: C:\Users\ASUS\Desktop\Professional_repo\Logger\Logger_\src\executive\ErrorExecutive.cpp, Line: 25

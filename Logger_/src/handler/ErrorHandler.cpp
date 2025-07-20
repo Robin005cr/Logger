@@ -12,9 +12,10 @@
  */
 #include "handler/ErrorHandler.hpp"
 #include "FileHandler.hpp"
-void ErrorHandler::LOG_ERROR(const std::string &errorMessage)
+using namespace std;
+void ErrorHandler::LOG_ERROR(const string &errorMessage,const string& filePath, int lineNumber)
 {
 
-    std::cerr << "Error: " << errorMessage << std::endl;
-    FileHandler::writeToLog(errorMessage, "ERROR");
+    cerr << "Error: " << errorMessage << endl;
+    FileHandler::writeToLog(errorMessage, "ERROR",filePath, lineNumber);
 }

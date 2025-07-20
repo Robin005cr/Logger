@@ -14,6 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <chrono>
 using namespace std;
 class FileHandler
 {
@@ -24,5 +25,5 @@ private:
 
 public:
     static void createLogFile();
-    static void writeToLog(const string &message, const string &logType);
+    static void writeToLog(const string &message, const string &logType,const string& filePath, int lineNumber);
 };
