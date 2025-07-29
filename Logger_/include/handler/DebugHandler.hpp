@@ -15,7 +15,7 @@
 class DebugHandler
 {
 public:
-    static void LOG_DEBUG(const std::string &debugMessage,const std::string& filePath, int lineNumber){}
+    static void LOG_DEBUG(const std::string& debugMessage, const std::string& filePath, int lineNumber);
 
 
 };

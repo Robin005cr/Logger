@@ -21,5 +21,14 @@ int main()
 	FileHandler::createLogFile();
 	ErrorExecutive E;
 	E.fileNotFound();
+	
+	TimeHandler T;
+	cout << "Current Time: " << T.getCurrentTime() << endl;
+	cout << "Current Date: " << T.getCurrentDate() << endl;
+	cout << "Current DateTime: " << T.getCurrentDateTime() << endl;
+	cout << "UTC Timestamp: " << T.getUTCTimestamp() << endl;
+	cout << "GPS Timestamp: " << T.getGPSTimestamp() << endl;
+	
+
 	return 0;
 }

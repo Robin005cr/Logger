@@ -12,3 +12,4 @@
  */
 #include "handler/ErrorHandler.hpp"
 #include "handler/WarningHandler.hpp"
+#include "TimeHandler.hpp"
