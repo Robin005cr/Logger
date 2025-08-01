@@ -12,7 +12,7 @@
  */
 #pragma once
 #include<string>
-class WarningHandler
+class WarningHandler final
 {
 public:
     static void LOG_WARNING(const std::string& warningMessage, const std::string& filePath, int lineNumber);

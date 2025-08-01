@@ -11,11 +11,21 @@
  *
  */
 #pragma once
-#include<string>
-class DebugHandler
+#include<iostream>
+#include <string>
+#define LOG_PREFIX "[DEBUG] "
+class DebugHandler final
 {
 public:
-    static void LOG_DEBUG(const std::string& debugMessage, const std::string& filePath, int lineNumber);
-
-
+    static void LOG_DEBUG(const std::string &debugMessage, const std::string &filePath, int lineNumber);
+    static void log_debug(const char *message);
+    static void log_debug(const char *format, ...);
+    // 2. Handle std::ostream-like << syntax
+    template <typename T>
+    void log_debug(const T &value)
+    {
+        std::ostringstream oss;
+        oss << LOG_PREFIX << value;
+        std::cout << oss.str() << std::endl;
+    }
 };

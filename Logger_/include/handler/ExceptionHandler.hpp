@@ -12,7 +12,7 @@
  */
 #pragma once
 #include <string>
-class ExceptionHandler
+class ExceptionHandler final
 {
 public:
     static void LOG_EXCEPTION(const std::string &exceptionMessage, const std::string &filePath, int lineNumber);
