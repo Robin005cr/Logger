@@ -28,6 +28,11 @@ int main()
 	cout << "Current DateTime: " << T.getCurrentDateTime() << endl;
 	cout << "UTC Timestamp: " << T.getUTCTimestamp() << endl;
 	cout << "GPS Timestamp: " << T.getGPSTimestamp() << endl;
+
+	DebugHandler d;
+	d.log_debug("printmessage",__FILE__, __LINE__);
+	int a = 9;
+	d.log_debug(a, __FILE__, __LINE__);
 	
 
 	return 0;

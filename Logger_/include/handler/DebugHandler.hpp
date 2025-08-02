@@ -13,19 +13,20 @@
 #pragma once
 #include<iostream>
 #include <string>
+#include "FileHandler.hpp"
 #define LOG_PREFIX "[DEBUG] "
 class DebugHandler final
 {
 public:
-    static void LOG_DEBUG(const std::string &debugMessage, const std::string &filePath, int lineNumber);
-    static void log_debug(const char *message);
-    static void log_debug(const char *format, ...);
+    static void log_debug(const std::string &debugMessage, const string& filePath, int lineNumber);
+    static void log_debug(const char *format, const string& filePath, int lineNumber ...);
     // 2. Handle std::ostream-like << syntax
     template <typename T>
-    void log_debug(const T &value)
+    void log_debug(const T &value, const string& filePath, int lineNumber)
     {
         std::ostringstream oss;
         oss << LOG_PREFIX << value;
         std::cout << oss.str() << std::endl;
+         FileHandler::writeToLog(oss.str(), "Warning", filePath, lineNumber);
     }
 };

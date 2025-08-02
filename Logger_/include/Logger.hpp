@@ -12,4 +12,5 @@
  */
 #include "handler/ErrorHandler.hpp"
 #include "handler/WarningHandler.hpp"
+#include "handler/DebugHandler.hpp"
 #include "TimeHandler.hpp"

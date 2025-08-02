@@ -1,0 +1,6 @@
+[2025-08-02 23:53:24] [ERROR] File not found: Tax-2021.txt
+File: C:\Users\ASUS\Desktop\Professional_repo\Logger\Logger_\src\executive\ErrorExecutive.cpp, Line: 28
+[2025-08-02 23:53:24] [Warning] printmessage
+File: C:\Users\ASUS\Desktop\Professional_repo\Logger\Logger_\src\main.cpp, Line: 33
+[2025-08-02 23:53:24] [Warning] [DEBUG] 9
+File: C:\Users\ASUS\Desktop\Professional_repo\Logger\Logger_\src\main.cpp, Line: 35

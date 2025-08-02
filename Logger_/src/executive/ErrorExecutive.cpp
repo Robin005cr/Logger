@@ -16,6 +16,8 @@
 int minimumValue = 35;
 int maximumValue = 100;
 using namespace std;
+
+#define LOG_ERROR(msg) ErrorHandler::LOG_ERROR(msg, __FILE__, __LINE__)
 void ErrorExecutive::fileNotFound()
 {
     ofstream fileTax("Tax-2021.txt"); // It will create a file if it does not exist.
@@ -23,7 +25,7 @@ void ErrorExecutive::fileNotFound()
 
     if (fileTax.is_open())
     {
-        ErrorHandler::LOG_ERROR("File not found: Tax-2021.txt", __FILE__, __LINE__);
+        LOG_ERROR("File not found: Tax-2021.txt");
     }
 
 
@@ -40,7 +42,7 @@ void ErrorExecutive::dataValidation(int data)
 {
     if (data < minimumValue || data > maximumValue)
     {
-        ErrorHandler::LOG_ERROR("Data validation failed: Value out of range", __FILE__, __LINE__);
+        LOG_ERROR("Data validation failed: Value out of range");
     }
     else
     {
